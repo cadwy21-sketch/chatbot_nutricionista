@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nutricionista - Salud Física & Mental</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#chat">Chat</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Foto Nutricionista" class="profile-pic" />
+      <div class="bio">
+        <h1>Lic. Leydy Flores</h1>
+        <p>Nutricionista certificada enfocada en salud física y mental. Mi pasión es ayudarte a lograr un equilibrio saludable y un bienestar integral.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Servicios</h2>
+      <ul>
+        <li>Planes nutricionales personalizados</li>
+        <li>Asesoría en salud emocional</li>
+        <li>Consultas virtuales y presenciales</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="chat">
+    <div class="container">
+      <h2>Chat Virtual</h2>
+      <div id="chatbox">
+        <div id="chat-log"></div>
+        <input type="text" id="user-input" placeholder="Escribe tu mensaje..." autofocus />
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Lic. Leydy Flores - Nutricionista</p>
+  </footer>
+  <a href="https://www.instagram.com/leydyflores/" target="_blank" class="social-icon">
+  <i class="fab fa-instagram"></i>
+</a>
+
+  <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+</body>
+</html>
+
